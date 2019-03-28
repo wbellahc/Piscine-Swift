@@ -20,9 +20,12 @@ class AddScreenViewController: UIViewController, UITextFieldDelegate, UITextView
         if segue.identifier == "backSegue" {
             if let vc = segue.destination as? ViewController {
                 vc.title = "Back from 2nd View"
-                if addName.text != "" {
-                    print("New death added: name \(addName.text!), death: \(addDeath.text), date: \(addTime.date)")
-                    Data.deaths.append((n: addName.text!, dD: addDeath.text, date: dateFormatter.string(from: addTime.date)))
+                let name = addName.text
+                var txt = addDeath.text
+                txt = txt?.trimmingCharacters(in: .whitespacesAndNewlines)
+                if name?.trimmingCharacters(in: .whitespacesAndNewlines) != "" {
+                    print("New death added: name: \(addName.text!), death: \(addDeath.text), date: \(addTime.date)")
+                    Data.deaths.append((n: name!, dD: txt!, date: dateFormatter.string(from: addTime.date)))
                 }
             }
         }
