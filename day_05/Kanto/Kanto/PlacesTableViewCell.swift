@@ -12,10 +12,10 @@ class PlacesTableViewCell: UITableViewCell {
 
     @IBOutlet weak var placeLabel: UILabel!
     
-    var place : String? {
+    var place : findLoc? {
         didSet {
             if let p = place {
-                placeLabel.text = String(describing: p)
+                placeLabel.text = p.title
             }
         }
     }

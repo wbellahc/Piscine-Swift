@@ -17,11 +17,25 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "placeCell") as! PlacesTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "placeCell", for: indexPath) as! PlacesTableViewCell
         cell.layer.borderWidth = 0.5
-        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.borderColor = UIColor.gray.cgColor
         cell.place = Data.places[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToMap", sender: Data.places[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToMap" {
+            if let vc = segue.destination as? SecondViewController {
+                if let sender = sender as? findLoc {
+                    vc.currentLoc = sender
+                }
+            }
+        }
     }
     
     override func viewDidLoad() {
