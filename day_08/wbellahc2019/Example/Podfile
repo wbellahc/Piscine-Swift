@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'wbellahc2019_Example' do
+  pod 'wbellahc2019', :path => '../'
+
+  target 'wbellahc2019_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

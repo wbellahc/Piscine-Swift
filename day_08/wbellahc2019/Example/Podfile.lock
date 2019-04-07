@@ -1,0 +1,16 @@
+PODS:
+  - wbellahc2019 (0.1.0)
+
+DEPENDENCIES:
+  - wbellahc2019 (from `../`)
+
+EXTERNAL SOURCES:
+  wbellahc2019:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  wbellahc2019: c1aff9b5993b2830404b2b8ee621d216a18cd663
+
+PODFILE CHECKSUM: 0a3c17a27e8116a118fd666b580609c50c5d7c4a
+
+COCOAPODS: 1.6.1

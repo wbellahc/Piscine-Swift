@@ -1,0 +1,6 @@
+framework module wbellahc2019 {
+  umbrella header "wbellahc2019-umbrella.h"
+
+  export *
+  module * { export * }
+}
