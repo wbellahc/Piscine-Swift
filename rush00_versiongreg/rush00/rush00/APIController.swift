@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 class APIController {    
-    static let CONSUMER_KEY: String = "43bbc6bc08f75bf4d46b6d47353eca2d71772a9eff69da0fbaa7f111c796e6db"
-    static let CONSUMER_SECRET: String = "bee6cb288e485c2269141c917fc9c6b56ae720567b382aaed80608e54a146412"
+    static let CONSUMER_KEY: String = "#"
+    static let CONSUMER_SECRET: String = "#"
     static var token: String?
     static var accessToken: String?
     
